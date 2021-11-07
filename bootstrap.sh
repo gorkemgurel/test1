@@ -65,10 +65,7 @@ for tool in "${TOOLS[@]}"; do
   fi
 done
 
-CONFS=(
-  DEBUG
-  RELEASE
-)
+CONFS=DEBUG
 
 CONFDESTS=(
   Debug
