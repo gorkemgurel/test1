@@ -65,7 +65,10 @@ for tool in "${TOOLS[@]}"; do
   fi
 done
 
-CONFS="DEBUG"
+CONFS=(
+  DEBUG
+  RELEASE
+)
 
 CONFDESTS=(
   Debug
@@ -171,11 +174,11 @@ install_prebuilt_sdk() {
   fi
 
   for ((i=0; $i < $CONFNUM; i++)); do
-    local file="VoodooInput-${vers}-${CONFS[$i]}.zip"
+    local file="VoodooInput-${vers}-DEBUG.zip"
 
     echo "-> Downloading prebuilt debug version ${file}..."
 
-    local url="https://github.com/${REPO_PATH}/releases/download/${vers}/${file}DEBUG"
+    local url="https://github.com/${REPO_PATH}/releases/download/${vers}/${file}"
     "${CURL}" -LfsO "${url}" || ret=$?
     if [ $ret -ne 0 ]; then
       echo "ERROR: Failed to download ${file} with code ${ret}!"
