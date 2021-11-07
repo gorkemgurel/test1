@@ -19,7 +19,7 @@
 #  src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/VoodooInput/master/VoodooInput/Scripts/bootstrap.sh) && eval "$src" || exit 1
 #
 
-BUILD_MODE="compiled"
+BUILD_MODE="prebuilt"
 REPO_PATH="acidanthera/VoodooInput"
 SDK_PATH="VoodooInput.kext"
 DSYM_PATH="VoodooInput.kext.dSYM"
