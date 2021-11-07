@@ -178,7 +178,7 @@ install_prebuilt_sdk() {
 
     echo "-> Downloading prebuilt debug version ${file}..."
 
-    local url="https://github.com/${REPO_PATH}/releases/download/${vers}/${file}"
+    local url="https://github.com/${REPO_PATH}/releases/download/${vers}/${file}DEBUG"
     "${CURL}" -LfsO "${url}" || ret=$?
     if [ $ret -ne 0 ]; then
       echo "ERROR: Failed to download ${file} with code ${ret}!"
